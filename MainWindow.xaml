@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfAppAddproduct.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppAddproduct"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="500">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <FlowDocumentReader Name="flowDocumentReader">
+                <FlowDocument>
+                    <List x:Name="productList" MarkerStyle="Disc" Margin="10">
+                        <ListItem>
+                            <Paragraph>
+                                <Run Text="Апельсин" />
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run Text="Банан" />
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run Text="Киви" />
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run Text="Лайм" />
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run Text="Лимон" />
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                <Run Text="Яблоко" />
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+                    <Paragraph>
+                        <InlineUIContainer>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox x:Name="newProductTextBox" Width="200" Margin="0,10,0,0" />
+                                <Button Content="Добавить" Click="AddProductButtonClick" Margin="10,10,0,0" />
+                            </StackPanel>
+                        </InlineUIContainer>
+                    </Paragraph>
+                    <BlockUIContainer>
+                        <Image Source="product.png" Width="250" Height="250" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                    </BlockUIContainer>
+                </FlowDocument>
+            </FlowDocumentReader>
+        </ScrollViewer>
+    </Grid>
+</Window>
